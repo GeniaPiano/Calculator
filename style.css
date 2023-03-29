@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    50deg,
+    #83d0dc,
+    #5fc8e2,
+    #2fbfea,
+    #00b5f3,
+    #00a9fb,
+    #009cff,
+    #008eff,
+    #3c7cff
+  );
+}
+
+.calculator {  
+  height: 60vh;
+  min-width: 370px;
+  max-width: 370px;
+ 
+  
+}
+
+.display {
+  width: 100%;
+  min-height: 20%;
+  max-height: min-content;
+  background-color: #00a9fb;
+  box-shadow: 8px 8px 40px 0px rgba(66, 68, 90, 1);
+  word-break: break-all;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 7px;
+  font-weight: bold;
+}
+
+.current-number {
+  font-size: 40px;
+  color: white;
+}
+
+.previous-number {
+  color: rgb(71, 71, 76);
+  font-size: 25px;
+}
+.math-operator {
+  font-size: 25px;
+  color: white;
+}
+.button-box {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.button-box button {
+  font-size: 25px;
+  background-color: #085c86;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  transition: all 0,2 ease-in-out;
+}
+
+button:hover {
+  background-color: #073c57;
+}
+.equals {
+  grid-row: -1/-3;
+  grid-column: -2/-1;
+}
+
+.calculator-history {
+  height: 60vh;
+  margin-left: 10px;
+  width: 145px;
+  background-color: #00a9fb;
+  text-align: center;
+  color: white;
+}
+
+.history-title {
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.list-item {
+  list-style: none;
+  color: rgb(71, 71, 76);
+  font-weight: bold;
+  padding: 7px 0px;
+}
+.clear-history-btn{
+  color: white;
+  padding: 3px 10px;
+  margin: 7px auto; 
+  font-size: 15px;
+  background-color: #073c57;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+
+.clear-history-btn-active{
+  display:block;
+}
